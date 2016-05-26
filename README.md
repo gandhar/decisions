@@ -25,7 +25,7 @@ once the vm is up, a demo site should be running on
 **Deploy post to running blog**
 
 install pre-requisite 
-[xmlrpc](xmlrpc.readthedocs.io/en/latest/overview.html#installation)
+[xmlrpc](https://python-wordpress-xmlrpc.readthedocs.io/en/latest/overview.html#installation)
 
 `sudo easy_install python-wordpress-xmlrpc`
 
