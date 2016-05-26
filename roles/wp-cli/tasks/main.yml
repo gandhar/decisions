@@ -1,0 +1,10 @@
+---
+- name: install wordpress cli
+  get_url: url=https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar dest=/usr/local/bin/wp mode=0755 validate_certs=no
+
+- name: setup wordpress site
+  remote_user: vagrant
+  sudo: false
+  shell: wp core install --url={{WP_SITE}} --title={{WP_TITLE}} --admin_name={{ADMIN_NAME}} --admin_email={{ADMIN_EMAIL}} --admin_password={{ADMIN_PASSWORD}}
+  args:
+    chdir: /usr/share/wordpress/

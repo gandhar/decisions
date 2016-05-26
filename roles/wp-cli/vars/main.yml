@@ -1,0 +1,6 @@
+---
+WP_SITE: 'localhost:8081/wordpress'
+WP_TITLE: 'demo_site'
+ADMIN_NAME: 'admin'
+ADMIN_EMAIL: 'dummyemail@email.com'
+ADMIN_PASSWORD: 'password'

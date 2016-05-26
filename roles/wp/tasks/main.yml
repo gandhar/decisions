@@ -1,0 +1,9 @@
+- name: link wordpress dir from installation
+  file: src=/usr/share/wordpress dest=/var/www/html/wordpress state=link
+
+- name: write wordpress template
+  template: src=config-localhost.php.j2 dest=/etc/wordpress/config-localhost.php
+
+- name: setup mysql database and user
+  command: mysql -u root -e "CREATE DATABASE IF NOT EXISTS {{DB_NAME}};GRANT ALL ON {{DB_NAME}}.* TO {{DB_USER}}@localhost IDENTIFIED BY '{{DB_PASSWORD}}'; FLUSH PRIVILEGES;"
+  notify: apache2_restart

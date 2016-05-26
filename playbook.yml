@@ -1,0 +1,8 @@
+---
+- hosts: default
+  sudo: yes
+
+  roles:
+   - webserver
+   - wp
+   - wp-cli

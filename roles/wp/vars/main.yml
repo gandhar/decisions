@@ -1,0 +1,4 @@
+---
+DB_NAME: "wordpress"
+DB_USER: "wordpressuser"
+DB_PASSWORD: "complexpassword"
